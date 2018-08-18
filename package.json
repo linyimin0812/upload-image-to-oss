@@ -1,0 +1,36 @@
+{
+  "name": "upload-image-to-oss",
+  "version": "1.0.0",
+  "description": "Auto upload image to oss when copy image, and return the link of image",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"no test specified\" && exit 0",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/linyimin-bupt/upload-image-to-oss.git"
+  },
+  "keywords": [
+    "typescript",
+    "oss",
+    "xclip",
+    "clipboard"
+  ],
+  "author": "Yimin Lin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/linyimin-bupt/upload-image-to-oss/issues"
+  },
+  "homepage": "https://github.com/linyimin-bupt/upload-image-to-oss#readme",
+  "dependencies": {
+    "ali-oss": "^6.0.1",
+    "dotenv": "^6.0.0",
+    "iohook": "^0.2.0",
+    "keypress-event": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^4.0.3",
+    "@types/node": "^10.7.1"
+  }
+}
