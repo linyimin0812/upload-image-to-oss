@@ -2,7 +2,7 @@ A tool to upload picture(copy or cut) which stored in clipboad to OSS, and retur
 
 ### usage
 
-1. Create a .env in project's root directory, and specify the OSS information
+- Create a .env in project's root directory, and specify the OSS information
 
 ```shell
 $ touch .env
@@ -21,18 +21,18 @@ accessKeySecret=******
 # 通过控制台创建的bucket, 或通过putBucket创建
 bucket=******
 ```
-2. Install xclip package
+- Install xclip package
 ```shell
 $ sudo apt-get install xclip
 ```
 
-3. Install upload-image-to-oss
+- Install upload-image-to-oss
 
 ```shell
 $ npm i upload-image-to-oss
 ```
 
-4. Specify shortcut to upload picture when copy a cut a picture
+- Specify shortcut to upload picture when copy a cut a picture
 
 ```typescript
 import start from 'upload-image-to-oss'
