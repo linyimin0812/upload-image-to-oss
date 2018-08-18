@@ -1,6 +1,6 @@
 {
   "name": "upload-image-to-oss",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Auto upload image to oss when copy image, and return the link of image",
   "main": "dist/index.js",
   "scripts": {
