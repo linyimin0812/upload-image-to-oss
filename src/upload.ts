@@ -21,13 +21,11 @@ async function put(data: Buffer): Promise<string> {
   try {
     const imageName = `${cuid()}.png`
     let result = await client.put(imageName, data)
-    console.log('put result:', JSON.stringify(result, null, 2))
     // copy the url to clipboard
     copyContentToClipboard(result.url)
     // Change object acl to 'public-read', so we can view the picture by link
     client.putACL(imageName, 'public-read')
       .then((result: any) => [
-        console.log('putACL result:', JSON.stringify(result, null, 2))
       ])
       .catch((err: Error) => {
         console.log(err)

@@ -19,7 +19,6 @@ export function getContentFromCliboard(): Buffer {
   const result = spawnSync(pasteImage.command, pasteImage.args)
   const stdout = result.stdout
   if (result.status === 0 && stdout.length > 0) {
-    console.log(stdout)
     return Buffer.from(result.stdout)
   }
   throw new Error('The type of clipboard\' content is not image')
