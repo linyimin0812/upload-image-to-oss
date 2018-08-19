@@ -1,4 +1,4 @@
-
+import popUpNotify from './notification'
 import { spawnSync, exec } from 'child_process'
 interface Command {
   command: string,
@@ -21,6 +21,7 @@ export function getContentFromCliboard(): Buffer {
   if (result.status === 0 && stdout.length > 0) {
     return Buffer.from(result.stdout)
   }
+  popUpNotify()
   throw new Error('The type of clipboard\' content is not image')
 }
 

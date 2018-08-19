@@ -2,6 +2,7 @@
 import OSS from 'ali-oss'
 import cuid from 'cuid'
 import dotenv from 'dotenv'
+import popUpNotify from './notification'
 import { default as Keypress, TwoKeys, ThreeKeys } from 'keypress-event'
 import { getContentFromCliboard, copyContentToClipboard } from './clipboard'
 
@@ -23,6 +24,7 @@ async function put(data: Buffer): Promise<string> {
     let result = await client.put(imageName, data)
     // copy the url to clipboard
     copyContentToClipboard(result.url)
+    popUpNotify(data)
     // Change object acl to 'public-read', so we can view the picture by link
     client.putACL(imageName, 'public-read')
       .then((result: any) => [
@@ -32,6 +34,7 @@ async function put(data: Buffer): Promise<string> {
       })
     return result.url
   } catch (err) {
+    popUpNotify()
     throw err
   }
 }
