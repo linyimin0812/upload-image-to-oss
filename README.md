@@ -41,3 +41,9 @@ start(['ctrl', 'alt', 'u'])
 ```
 
 When the type of content stored in clipboard is picture, and if you press `ctrl+alt+u`,the picture will be uploaded to the specified OSS, and the link will store in clipboard, so you can use `ctrl+v` to get the link.
+
+### CHANGELOG
+**v1.0.7**(Aug 2018)
+1. Specify shortcut to upload image which stored in clipboard.
+2. Give a Pop-up notification after uploaded the  picture(copy or cut) stored in clipboard to OSS
+3. Log in ~/.upload-image-to-oss
