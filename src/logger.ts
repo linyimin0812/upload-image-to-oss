@@ -41,7 +41,6 @@ export const logger = function (): winston.Logger {
       fs.mkdirSync(baseDir)
     }
     logger.add(new winston.transports.File({ filename: `${baseDir}/info.log`, level: 'silly' }))
-    console.log(`${baseDir}/info.log`)
     logger.add(new winston.transports.File({ filename: `${baseDir}/error.log`, level: 'error' }))
   }
   return logger

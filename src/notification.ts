@@ -16,7 +16,7 @@ function popUpNotify(data?: Buffer) {
   const notifier = new NotifySend()
   // transfer buffer to picture
   if(! data) {
-    options.message = 'Error, Please Lookup /var/log/upload.log'
+    options.message = 'Error, Please Lookup ~/.upload-picture-to-oss/error.log'
     options.icon = path.join(__dirname, '../', './images/error.png')
     notifier.notify(options)
     return

@@ -2,10 +2,9 @@
 import OSS from 'ali-oss'
 import cuid from 'cuid'
 import dotenv from 'dotenv'
-import { logger } from './logger'
-import popUpNotify from './notification'
-import { default as Keypress, TwoKeys, ThreeKeys } from 'keypress-event'
-import { getContentFromCliboard, copyContentToClipboard } from './clipboard'
+import { logger } from '../logger'
+import popUpNotify from '../notification'
+import { copyContentToClipboard } from '../clipboard'
 
 dotenv.config()
 const log = logger()
@@ -44,18 +43,5 @@ async function put(data: Buffer): Promise<string> {
   }
 }
 
-function start(shortcut: TwoKeys | ThreeKeys) {
-  log.info('Register Shortcut: %s', shortcut.join('+'))
-  Keypress.registerShortcut(shortcut, () => {
-    try {
-      const buffer = getContentFromCliboard()
-      put(buffer)
-      log.info('Shortcut trigger and get content form clipboard success')
-    } catch(err) {
-      log.error('Shortcut trigger and get content form clipboard failed, the reason is %s', JSON.stringify(err, null, 2))
-    }
-  })
-  Keypress.start()
-}
+export default put
 
-export default start
