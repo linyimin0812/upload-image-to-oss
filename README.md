@@ -2,7 +2,41 @@ A tool to upload picture(copy or cut) which stored in clipboad to OSS, and retur
 
 ### usage
 
-- Copy the .env.template file to .env in project's root directory, and specify the server information
+- Copy the follow content to .env in project's root directory, and specify the server information
+
+```
+# Server Mode: We support "OSS" and "Apache Server" Now
+## You can specify "OSS" or "Apache"
+mode=OSS
+
+# Aliyun Object Storage Service (OSS)
+## bucket 所在的区域, 默认 oss-cn-hangzhou
+region=******
+## 通过阿里云控制台创建的access key。
+accessKeyId=******
+## 通过阿里云控制台创建的access secret
+accessKeySecret=******
+## 通过控制台创建的bucket, 或通过putBucket创建
+bucket=******
+
+# Apache Sever
+## Server IP, 默认是localhost
+serverIP=localhost
+## Server的ssh端口, 默认是22
+sshPort=22
+## Server 的账户
+account=******
+## 账户对应的密码
+password=******
+## 图片所处的目录, 默认是/var/www/html/images
+imagesDirectory=/var/www/html/images
+## 访问图片的url, 设置之后可以访问到所有图片,并可以修改图片名称
+imagesUrl=/images
+## Apache Server 对应的端口, 默认是80
+serverPort=80
+```
+
+---
 
 This plugin support OSS and Apache Server, specify the infomation of server which you choose to store the pictures.
 
