@@ -10,13 +10,13 @@ dotenv.config()
 const log = logger()
 
 const apacheConfig = {
-  serverIP: process.env.serverIP || 'localhost',
-  sshPort: process.env.sshPort || '22',
-  account: process.env.account,
-  password: process.env.password,
+  serverIP       : process.env.serverIP || 'localhost',
+  sshPort        : process.env.sshPort || '22',
+  account        : process.env.account,
+  password       : process.env.password,
   imagesDirectory: process.env.imagesDirectory,
-  serverPort: process.env.serverPort,
-  imagesUrl: process.env.imagesUrl,
+  serverPort     : process.env.serverPort,
+  imagesUrl      : process.env.imagesUrl,
 }
 
 function checkConfig(config) {

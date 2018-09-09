@@ -3,7 +3,7 @@ import { spawnSync, exec } from 'child_process'
 import { logger } from './logger'
 interface Command {
   command: string,
-  args: string[],
+  args   : string[],
 }
 
 // const pasteText: Command = {
@@ -13,7 +13,7 @@ interface Command {
 
 const pasteImage: Command = {
   command: 'xclip',
-  args: ['-selection', 'clipboard', '-t', 'image/png', '-o'],
+  args   : ['-selection', 'clipboard', '-t', 'image/png', '-o'],
 }
 const log = logger()
 export function getContentFromCliboard(): Buffer {

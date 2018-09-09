@@ -10,10 +10,10 @@ dotenv.config()
 const log = logger()
 
 let client = new OSS({
-  region: process.env.region,
-  accessKeyId: process.env.accessKeyId,
+  region         : process.env.region,
+  accessKeyId    : process.env.accessKeyId,
   accessKeySecret: process.env.accessKeySecret,
-  bucket: process.env.bucket,
+  bucket         : process.env.bucket,
 })
 
 

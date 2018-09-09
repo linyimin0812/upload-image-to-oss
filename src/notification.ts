@@ -5,19 +5,19 @@ import path from 'path'
 
 function popUpNotify(data?: Buffer) {
   const options = {
-    title: 'Picture to Link',
-    message: 'Upload Message Success',
-    icon: '',
-    urgency: 'critical',
-    time: void 0,
+    title   : 'Picture to Link',
+    message : 'Upload Message Success',
+    icon    : '',
+    urgency : 'critical',
+    time    : void 0,
     category: void 0,
-    hint: void 0,
+    hint    : void 0,
   }
   const notifier = new NotifySend()
   // transfer buffer to picture
   if(! data) {
     options.message = 'Error, Please Lookup ~/.upload-picture-to-oss/error.log'
-    options.icon = path.join(__dirname, '../', './images/error.png')
+    options.icon    = path.join(__dirname, '../', './images/error.png')
     notifier.notify(options)
     return
   }

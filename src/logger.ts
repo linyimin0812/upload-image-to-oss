@@ -65,8 +65,8 @@ function stackInfo(): string {
   const sp = stackReg.exec(info)
   if (sp && sp.length === 4) {
     const filename = sp[1].split(path.sep).pop()
-    const lineNum = sp[2]
-    reuslt = `${filename}:${lineNum}`
+    const lineNum  = sp[2]
+          reuslt   = `${filename}:${lineNum}`
   }
   return reuslt
 }
