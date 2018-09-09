@@ -1,15 +1,15 @@
 {
-  "name"       : "upload-image-to-oss",
-  "version"    : "1.0.8",
+  "name": "upload-image-to-oss",
+  "version": "1.0.9",
   "description": "Auto upload image to oss when copy image, and return the link of image",
-  "main"       : "dist/index.js",
-  "scripts"    : {
-    "test" : "echo \"no test specified\" && exit 0",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"no test specified\" && exit 0",
     "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url" : "git+ssh://git@github.com/linyimin-bupt/upload-image-to-oss.git"
+    "url": "git+ssh://git@github.com/linyimin-bupt/upload-image-to-oss.git"
   },
   "keywords": [
     "typescript",
@@ -17,26 +17,26 @@
     "xclip",
     "clipboard"
   ],
-  "author" : "Yimin Lin",
+  "author": "Yimin Lin",
   "license": "MIT",
-  "bugs"   : {
+  "bugs": {
     "url": "https://github.com/linyimin-bupt/upload-image-to-oss/issues"
   },
   "homepage": "https://github.com/linyimin-bupt/upload-image-to-oss#readme",
   "dependencies": {
-    "ali-oss"       : "^6.0.1",
-    "cuid"          : "^2.1.2",
-    "dotenv"        : "^6.0.0",
-    "iohook"        : "^0.2.0",
+    "ali-oss": "^6.0.1",
+    "cuid": "^2.1.2",
+    "dotenv": "^6.0.0",
+    "iohook": "^0.2.0",
     "keypress-event": "^1.1.2",
-    "node-notifier" : "^5.2.1",
-    "winston"       : "^3.0.0"
+    "node-notifier": "^5.2.1",
+    "winston": "^3.0.0"
   },
   "devDependencies": {
-    "@types/cuid"         : "^1.3.0",
-    "@types/dotenv"       : "^4.0.3",
-    "@types/node"         : "^10.9.4",
+    "@types/cuid": "^1.3.0",
+    "@types/dotenv": "^4.0.3",
+    "@types/node": "^10.9.4",
     "@types/node-notifier": "^0.0.28",
-    "@types/winston"      : "^2.4.4"
+    "@types/winston": "^2.4.4"
   }
 }
