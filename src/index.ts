@@ -13,7 +13,7 @@ function start(shortcut: TwoKeys | ThreeKeys) {
     try {
       const buffer = getContentFromCliboard()
       log.info('Shortcut trigger and get content form clipboard success')
-      selectServer(process.env.mode, buffer)
+      selectServer(process.env.mode!, buffer)
     } catch (err) {
       log.error('Shortcut trigger and get content form clipboard failed, the reason is %s', err)
     }
