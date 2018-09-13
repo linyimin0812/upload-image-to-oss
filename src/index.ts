@@ -1,11 +1,10 @@
 import { default as Keypress, TwoKeys, ThreeKeys } from 'keypress-event'
 import { getContentFromCliboard } from './clipboard'
-import { logger } from './logger'
+import { log } from 'brolog'
 import dotenv from 'dotenv'
 import putToOSS from './upolad/oss-upload'
 import putToApache from './upolad/apache-upload'
 
-const log = logger()
 dotenv.config()
 function start(shortcut: TwoKeys | ThreeKeys) {
   log.info('Register Shortcut: %s', shortcut.join('+'))

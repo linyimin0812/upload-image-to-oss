@@ -25,10 +25,13 @@
   "homepage": "https://github.com/linyimin-bupt/upload-image-to-oss#readme",
   "dependencies": {
     "ali-oss": "^6.0.1",
+    "brolog": "^1.8.1",
     "cuid": "^2.1.2",
     "dotenv": "^6.0.0",
     "iohook": "^0.2.0",
+    "isexe": "^2.0.0",
     "keypress-event": "^1.1.2",
+    "mime": "^2.3.1",
     "node-notifier": "^5.2.1",
     "winston": "^3.0.0"
   },

@@ -2,12 +2,11 @@ import fs from'fs'
 import cuid from 'cuid'
 import dotenv from 'dotenv'
 import { execSync } from 'child_process'
-import { logger } from '../logger'
+import { log } from 'brolog'
 import popUpNotify from '../notification'
 import { copyContentToClipboard } from '../clipboard'
 
 dotenv.config()
-const log = logger()
 
 const apacheConfig = {
   serverIP       : process.env.serverIP || 'localhost',

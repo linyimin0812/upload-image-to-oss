@@ -1,6 +1,6 @@
 import popUpNotify from './notification'
 import { spawnSync, exec } from 'child_process'
-import { logger } from './logger'
+import { log } from 'brolog'
 interface Command {
   command: string,
   args   : string[],
@@ -15,7 +15,6 @@ const pasteImage: Command = {
   command: 'xclip',
   args   : ['-selection', 'clipboard', '-t', 'image/png', '-o'],
 }
-const log = logger()
 export function getContentFromCliboard(): Buffer {
   const result = spawnSync(pasteImage.command, pasteImage.args)
   const stdout = result.stdout

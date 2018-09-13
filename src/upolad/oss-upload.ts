@@ -2,12 +2,11 @@
 import OSS from 'ali-oss'
 import cuid from 'cuid'
 import dotenv from 'dotenv'
-import { logger } from '../logger'
+import { log } from 'brolog'
 import popUpNotify from '../notification'
 import { copyContentToClipboard } from '../clipboard'
 
 dotenv.config()
-const log = logger()
 
 let client = new OSS({
   region         : process.env.region,
