@@ -91,3 +91,7 @@ When the type of content stored in clipboard is picture, and if you press `ctrl+
 
 **v1.0.9**(09 Sep 2018)
 1. Fixed any three will trigger when specify a three key shortcut bug.
+
+**v1.0.10**(13 Sep 2018)
+
+1. Repalce wiston with brolog
