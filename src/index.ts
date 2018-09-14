@@ -1,7 +1,7 @@
 import { default as Keypress, TwoKeys, ThreeKeys } from 'keypress-event'
 import { getContentFromCliboard } from './clipboard'
 import { log } from 'brolog'
-import dotenv from 'dotenv'
+import * as dotenv from 'dotenv'
 import putToOSS from './upolad/oss-upload'
 import putToApache from './upolad/apache-upload'
 
